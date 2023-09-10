@@ -17,7 +17,7 @@ public class Main {
         while (q.size() > 1) {
             for (int i = 0; i < k - 1; i++) {
                 q.offer(q.poll());
-            }
+            } 
             sb.append(q.poll()).append(", ");
         }
         sb.append(q.poll()).append(">");

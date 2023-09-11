@@ -7,7 +7,6 @@ public class Main {
        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
        int n = Integer.parseInt(br.readLine());
-       // n 은 45 이하의 자연수 
        int dp[] = new int[46];
        dp[1] = 1;
        

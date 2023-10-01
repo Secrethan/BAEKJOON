@@ -1,0 +1,7 @@
+-- 코드를 입력하세요
+SELECT COUNT(1)
+  FROM USER_INFO u1
+ WHERE 1=1
+  AND u1.AGE IS NULL
+ GROUP BY u1.AGE
+ ;

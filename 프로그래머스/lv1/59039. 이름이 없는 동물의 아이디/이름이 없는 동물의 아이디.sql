@@ -1,0 +1,8 @@
+-- 코드를 입력하세요
+SELECT a1.ANIMAL_ID
+  FROM ANIMAL_INS a1
+ WHERE 1=1
+   AND a1.NAME IS NULL
+ ORDER BY a1.ANIMAL_ID 
+;
+ 

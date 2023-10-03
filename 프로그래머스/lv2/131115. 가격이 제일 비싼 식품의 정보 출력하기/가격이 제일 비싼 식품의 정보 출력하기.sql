@@ -1,0 +1,8 @@
+-- 코드를 입력하세요
+SELECT f1.PRODUCT_ID, f1.PRODUCT_NAME, f1.PRODUCT_CD, f1.CATEGORY, f1.PRICE
+  FROM FOOD_PRODUCT f1
+ WHERE 1=1
+  AND f1.PRICE = (SELECT MAX(if1.PRICE)
+                    FROM FOOD_PRODUCT if1
+                 )
+ ;

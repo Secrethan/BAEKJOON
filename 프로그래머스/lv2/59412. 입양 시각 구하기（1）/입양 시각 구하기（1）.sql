@@ -1,0 +1,10 @@
+-- 코드를 입력하세요
+SELECT a.HOUR, COUNT(1)
+  FROM (SELECT TO_NUMBER(TO_CHAR(ia1.DATETIME, 'HH24')) as HOUR
+          FROM ANIMAL_OUTS ia1
+       ) a
+ WHERE  1=1
+   AND a.HOUR BETWEEN 9 AND 19
+ GROUP BY a.HOUR
+ ORDER BY a.HOUR
+   ;

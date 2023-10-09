@@ -1,0 +1,10 @@
+-- 코드를 입력하세요
+SELECT d1.DR_NAME
+     , d1.DR_ID
+     , d1.MCDP_CD
+     , TO_CHAR(d1.HIRE_YMD,'YYYY-MM-DD') as HIRE_YMD
+  FROM DOCTOR d1
+ WHERE 1=1
+   AND d1.MCDP_CD IN ('CS', 'GS')
+ORDER BY d1.HIRE_YMD DESC, d1.DR_NAME ASC
+  ;

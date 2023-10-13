@@ -1,0 +1,7 @@
+-- 코드를 입력하세요
+SELECT ROUND(AVG(C1.DAILY_FEE), 0) as AVERAGE_FEE
+  FROM (SELECT ic1.DAILY_FEE
+          FROM CAR_RENTAL_COMPANY_CAR ic1
+         WHERE 1=1
+           AND ic1.CAR_TYPE = 'SUV' 
+       ) C1

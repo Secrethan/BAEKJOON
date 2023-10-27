@@ -1,0 +1,14 @@
+-- 코드를 입력하세요
+SELECT F.ORDER_ID AS ORDER_ID
+     , F.PRODUCT_ID AS PRODUCT_ID
+     , NVL(TO_CHAR(F.OUT_DATE,'YYYY-MM-DD'),'') AS OUT_DATE
+     , CASE 
+        WHEN TO_CHAR(F.OUT_DATE,'YYYYMMDD') <= '20220501' THEN '출고완료'
+        WHEN TO_CHAR(F.OUT_DATE,'YYYYMMDD') > '20220501' THEN '출고대기'
+        ELSE '출고미정'
+       END AS 출고여부
+       
+  FROM FOOD_ORDER F
+  ORDER BY F.ORDER_ID 
+ 
+   
